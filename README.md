@@ -3,7 +3,7 @@ Short Tutorial:
 2. Download The Project
 3. Extract The Archive
 4. Go Into The Folder
-5. Run install_packages.bat
+5. Run install_packages.bat (run this every time you use it)
 6. then run start.bat (MAKE SURE YOU KEEP IT OPENED)
 7. then go to http://localhost:3551/ (MAKE SURE YOU KEEP THE BROWSER OPENED)
 8. Then Download Any Fortnite Build With A manifest downloader
