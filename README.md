@@ -9,5 +9,5 @@ Short Tutorial:
 8. Then Download Any Fortnite Build With A manifest downloader
 9. then use any private server to run the version you want
 10. then press ` or F8 to open the console and paste this command and hit enter: open 25.59.182.143
-11. if you need help dm me on discord at Secret Identity 2.0#0303 Or NRG Cristi#9364
+11. if you need help dm me on discord at Hacker7555#0303 Or NRG Cristi#9364
 12. Enjoy!!!
