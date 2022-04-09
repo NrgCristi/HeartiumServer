@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lawin0129/LawinServer.git"
+    "url": "git+https://github.com/CristianCosticea/HeartiumServer"
   },
   "keywords": [
     "fortnite",
@@ -27,10 +27,10 @@
     "node",
     "server"
   ],
-  "author": "Secret Identity",
+  "author": "NRG Cristi",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Lawin0129/LawinServer/issues"
+    "url": "https://github.com/CristianCosticea/HeartiumServer/issues"
   },
-  "homepage": "https://github.com/Lawin0129/LawinServer#readme"
+  "homepage": "https://github.com/CristianCosticea/HeartiumServer/#readme"
 }
