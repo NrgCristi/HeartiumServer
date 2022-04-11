@@ -1,4 +1,4 @@
-Download Node.JS From This Link: https://nodejs.org/en/download/
+Download Node.JS From This Link: https://nodejs.org/en/download/ (Make Sure To Install It With Chocolatey)
 Download The Project
 Extract The Archive To Any Location You Want
 Run install_packages.bat (Make Sure To Run This Every Time You Use This Private Server)
