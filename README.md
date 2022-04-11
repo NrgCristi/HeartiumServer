@@ -6,7 +6,7 @@ Short Tutorial:
 5. Run install_packages.bat (run this every time you use it)
 6. then run start.bat (MAKE SURE YOU KEEP IT OPENED)
 7. then go to http://localhost:3551/ (MAKE SURE YOU KEEP THE BROWSER OPENED)
-8. Then Download Any Fortnite Build With A manifest downloader
+8. Then Go To https://github.com/notsamicc/Fortnite-Builds and download any build
 9. then use any private server to run the version you want
 10. then press ` or F8 to open the console and paste this command and hit enter: open 25.59.182.143
 11. if you need help dm me on discord at Battle Pass#9757 Or NRG Cristi#9364
