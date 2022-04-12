@@ -18,10 +18,10 @@ express.use(Express.static('public'));
 
 
 const port = process.env.PORT || 3551;
-express.listen(port, console.log("Heartium started listening on port", port));
+express.listen(port, console.log("HeartiumServer Started Listening on port", port));
 
 
-if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "Heartium"))) fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "Heartium"));
+if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "HeartiumServer"))) fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "HeartiumServer"));
 
 // keep this at the end of the code thanks
 express.all("*", async (req, res) => {
