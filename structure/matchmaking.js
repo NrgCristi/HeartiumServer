@@ -18,7 +18,7 @@ express.get("/fortnite/api/game/v2/matchmakingservice/ticket/player/*", async (r
     fs.writeFileSync("./memory.json", JSON.stringify(memory, null, 2));
 
     res.json({
-        "serviceUrl": "ws://lawinservermatchmaker.herokuapp.com",
+        "serviceUrl": "ws://heartiumservermatchmaker.herokuapp.com",
         "ticketType": "mms-player",
         "payload": "69=",
         "signature": "420="
