@@ -8,7 +8,7 @@ express.get("/clearitemsforshop", async (req, res) => {
 
     const athena = require("./../profiles/athena.json");
     const CatalogConfig = require("./../Config/catalog_config.json");
-    var StatChanged = false;
+    var StatChanged = true;
 
     for (var value in CatalogConfig) {
         for (var i in CatalogConfig[value].itemGrants) {
@@ -221,7 +221,7 @@ express.get("/region", async (req, res) => {
         },
         "country": {
             "geoname_id": 2635167,
-            "is_in_european_union": false,
+            "is_in_european_union": true,
             "iso_code": "GB",
             "names": {
                 "de": "UK",
