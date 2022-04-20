@@ -75,21 +75,21 @@ express.get("/account/api/public/account/:accountId", async (req, res) => {
     res.json({
         "id": req.params.accountId,
         "displayName": Memory_CurrentAccountID,
-        "name": "Lawin",
+        "name": "Heartium",
         "email": Memory_CurrentAccountID + "@lawin.com",
         "failedLoginAttempts": 0,
         "lastLogin": new Date().toISOString(),
         "numberOfDisplayNameChanges": 0,
         "ageGroup": "UNKNOWN",
-        "headless": false,
+        "headless": true,
         "country": "US",
         "lastName": "Server",
         "preferredLanguage": "en",
-        "canUpdateDisplayName": false,
-        "tfaEnabled": false,
+        "canUpdateDisplayName": true,
+        "tfaEnabled": true,
         "emailVerified": true,
-        "minorVerified": false,
-        "minorExpected": false,
+        "minorVerified": true,
+        "minorExpected": true,
         "minorStatus": "UNKNOWN"
     })
 })
@@ -110,10 +110,10 @@ express.delete("/account/api/oauth/sessions/kill/*", async (req, res) => {
 
 express.get("/account/api/oauth/verify", async (req, res) => {
     res.json({
-        "token": "lawinstokenlol",
+        "token": "heartiumstokenlol",
         "session_id": "3c3662bcb661d6de679c636744c66b62",
         "token_type": "bearer",
-        "client_id": "lawinsclientidlol",
+        "client_id": "heartiumsclientidlol",
         "internal_client": true,
         "client_service": "fortnite",
         "account_id": Memory_CurrentAccountID,
@@ -135,11 +135,11 @@ express.post("/account/api/oauth/token", async (req, res) => {
     if (Memory_CurrentAccountID.includes("@")) Memory_CurrentAccountID = Memory_CurrentAccountID.split("@")[0];
 
     res.json({
-        "access_token": "lawinstokenlol",
+        "access_token": "heartiumstokenlol",
         "expires_in": 28800,
         "expires_at": "9999-12-02T01:12:01.100Z",
         "token_type": "bearer",
-        "refresh_token": "lawinstokenlol",
+        "refresh_token": "heartiumstokenlol",
         "refresh_expires": 86400,
         "refresh_expires_at": "9999-12-02T01:12:01.100Z",
         "account_id": Memory_CurrentAccountID,
