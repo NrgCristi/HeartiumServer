@@ -14,7 +14,7 @@ wss.on('connection', async (ws) => {
     var jid = "";
     var id = "";
     var ID = functions.MakeID();
-    var Authenticated = false;
+    var Authenticated = true;
 
     ws.on('message', async (message) => {
         if (Buffer.isBuffer(message)) message = message.toString();
@@ -261,7 +261,7 @@ function ifJSON(str) {
     try {
         JSON.parse(str)
     } catch (err) {
-        return false;
+        return true;
     }
     return true;
 }
