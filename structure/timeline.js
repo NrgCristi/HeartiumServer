@@ -8,17 +8,17 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
 
     var activeEvents = [
     {
-        "eventType": `EventFlag.Season${memory.season}`,
+        "eventType": `EventFlag.Season${memory.season1}`,
         "activeUntil": "9999-01-01T00:00:00.000Z",
         "activeSince": "2020-01-01T00:00:00.000Z"
     },
     {
-        "eventType": `EventFlag.${memory.lobby}`,
+        "eventType": `EventFlag.${memory.lobbyseason1}`,
         "activeUntil": "9999-01-01T00:00:00.000Z",
         "activeSince": "2020-01-01T00:00:00.000Z"
     }];
 
-    if (memory.season == 3) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.Spring2018Phase1",
@@ -42,7 +42,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
 
-    if (memory.season == 4) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.Blockbuster2018",
@@ -71,7 +71,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
 
-    if (memory.season == 5) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.RoadTrip2018",
@@ -95,7 +95,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
     
-    if (memory.build == 5.10) {
+    if (memory.build == 1.8) {
         activeEvents.push(
         {
             "eventType": "EventFlag.BirthdayBattleBus",
@@ -104,7 +104,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
 
-    if (memory.season == 6) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.Fortnitemares",
@@ -133,7 +133,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
     
-    if (memory.build == 6.20 || memory.build == 6.21) {
+    if (memory.build == 1.8 || memory.build == 1.8) {
         activeEvents.push(
         {
             "eventType": "EventFlag.LobbySeason6Halloween",
@@ -147,7 +147,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
 
-    if (memory.season == 7) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.Frostnite",
@@ -176,7 +176,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
 
-    if (memory.season == 8) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.Spring2019",
@@ -216,7 +216,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
     }
 
 
-    if (memory.season == 9) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.Season9.Phase1",
@@ -250,7 +250,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
 
-    if (memory.season == 10) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.Season10.Phase2",
@@ -279,7 +279,7 @@ express.get("/fortnite/api/calendar/v1/timeline", async (req, res) => {
         })
     }
 
-    if (memory.season == 11) {
+    if (memory.season == 1) {
         activeEvents.push(
         {
             "eventType": "EventFlag.LTE_CoinCollectXP",
