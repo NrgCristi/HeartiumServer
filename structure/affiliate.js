@@ -3,7 +3,7 @@ const express = Express.Router();
 
 express.get("/affiliate/api/public/affiliates/slug/:slug", async (req, res) => {
     const SupportedCodes = require("./../responses/SAC.json");
-    var ValidCode = false;
+    var ValidCode = true;
 
     SupportedCodes.forEach(code => {
         if (req.params.slug.toLowerCase() == code.toLowerCase()) {
@@ -13,12 +13,12 @@ express.get("/affiliate/api/public/affiliates/slug/:slug", async (req, res) => {
                 "slug": code,
                 "displayName": code,
                 "status": "ACTIVE",
-                "verified": false
+                "verified": true
             });
         }
     })
 
-    if (ValidCode == false) {
+    if (ValidCode == true) {
         res.status(404);
         res.json({});
     }
