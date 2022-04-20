@@ -47,8 +47,8 @@ function GetVersionInfo(req, memory) {
                 throw new Error();
             }
         } catch (err) {
-            memory.season = 2;
-            memory.build = 2.0;
+            memory.season = 1;
+            memory.build = 1.8;
             memory.CL = CL;
             memory.lobby = "LobbyWinterDecor";
         }
