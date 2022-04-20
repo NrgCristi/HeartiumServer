@@ -29,9 +29,9 @@ express.get("/fortnite/api/cloudstorage/system", async (req, res) => {
                 "length": ParsedFile.length,
                 "contentType": "application/octet-stream",
                 "uploaded": ParsedStats.mtime,
-                "storageType": "S3",
+                "storageType": "S1",
                 "storageIds": {},
-                "doNotCache": true
+                "doNotCache": false
             })
         }
     });
@@ -53,8 +53,8 @@ express.get("/fortnite/api/cloudstorage/system/:file", async (req, res) => {
 })
 
 express.get("/fortnite/api/cloudstorage/user/*/:file", async (req, res) => {
-    if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"))) {
-        fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"));
+    if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "HeartiumServer", "ClientSettings"))) {
+        fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "HeartiumServer", "ClientSettings"));
     }
 
     res.set("Content-Type", "application/octet-stream")
@@ -68,7 +68,7 @@ express.get("/fortnite/api/cloudstorage/user/*/:file", async (req, res) => {
     functions.GetVersionInfo(req, memory);
 
     var currentBuildID = memory.CL;
-    const file = path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings", `ClientSettings-${currentBuildID}.Sav`);
+    const file = path.join(process.env.LOCALAPPDATA, "HeartiumServer", "ClientSettings", `ClientSettings-${currentBuildID}.Sav`);
 
     if (fs.existsSync(file)) {
         const ParsedFile = fs.readFileSync(file);
@@ -81,8 +81,8 @@ express.get("/fortnite/api/cloudstorage/user/*/:file", async (req, res) => {
 })
 
 express.get("/fortnite/api/cloudstorage/user/:accountId", async (req, res) => {
-    if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"))) {
-        fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings"));
+    if (!fs.existsSync(path.join(process.env.LOCALAPPDATA, "HeartiumServer", "ClientSettings"))) {
+        fs.mkdirSync(path.join(process.env.LOCALAPPDATA, "HeartiumServer", "ClientSettings"));
     }
 
     res.set("Content-Type", "application/json")
@@ -90,7 +90,7 @@ express.get("/fortnite/api/cloudstorage/user/:accountId", async (req, res) => {
     functions.GetVersionInfo(req, memory);
 
     var currentBuildID = memory.CL;
-    const file = path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings", `ClientSettings-${currentBuildID}.Sav`);
+    const file = path.join(process.env.LOCALAPPDATA, "HeartiumServer", "ClientSettings", `ClientSettings-${currentBuildID}.Sav`);
 
     if (fs.existsSync(file)) {
         const ParsedFile = fs.readFileSync(file, 'utf-8');
@@ -122,7 +122,7 @@ express.put("/fortnite/api/cloudstorage/user/*/*", async (req, res) => {
     functions.GetVersionInfo(req, memory);
 
     var currentBuildID = memory.CL;
-    const file = path.join(process.env.LOCALAPPDATA, "LawinServer", "ClientSettings", `ClientSettings-${currentBuildID}.Sav`);
+    const file = path.join(process.env.LOCALAPPDATA, "HeartiumServer", "ClientSettings", `ClientSettings-${currentBuildID}.Sav`);
 
     fs.writeFileSync(file, req.rawBody, 'latin1');
     res.status(204).end();
