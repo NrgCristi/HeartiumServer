@@ -258,14 +258,14 @@ express.post("/fortnite/api/game/v2/profile/*/client/UnlockRewardNode", async (r
             profile.items[ID] = {
                 "templateId": WinterFestIDS[Season][req.body.nodeId],
                 "attributes": {
-                    "max_level_bonus": 0,
+                    "max_level_bonus": 1000,
                     "level": 1,
-                    "item_seen": false,
+                    "item_seen": true,
                     "xp": 0,
                     "variants": [],
-                    "favorite": false
+                    "favorite": true
                 },
-                "quantity": 1
+                "quantity": 100
             };
 
             ApplyProfileChanges.push({
@@ -275,7 +275,7 @@ express.post("/fortnite/api/game/v2/profile/*/client/UnlockRewardNode", async (r
             })
         }
 
-        profile.items[GiftID] = {"templateId":"GiftBox:gb_winterfestreward","attributes":{"max_level_bonus":0,"fromAccountId":"","lootList":[{"itemType":WinterFestIDS[Season][req.body.nodeId],"itemGuid":ID,"itemProfile":"athena","attributes":{"creation_time":new Date().toISOString()},"quantity":1}],"level":1,"item_seen":false,"xp":0,"giftedOn":new Date().toISOString(),"params":{"SubGame":"Athena","winterfestGift":"true"},"favorite":false},"quantity":1};
+        profile.items[GiftID] = {"templateId":"GiftBox:gb_winterfestreward","attributes":{"max_level_bonus":0,"fromAccountId":"","lootList":[{"itemType":WinterFestIDS[Season][req.body.nodeId],"itemGuid":ID,"itemProfile":"athena","attributes":{"creation_time":new Date().toISOString()},"quantity":1}],"level":1000,"item_seen":true,"xp":99999999999999,"giftedOn":new Date().toISOString(),"params":{"SubGame":"Athena","winterfestGift":"true"},"favorite":true},"quantity":1};
         profile.items[req.body.rewardGraphId].attributes.reward_keys[0].unlock_keys_used += 1;
         profile.items[req.body.rewardGraphId].attributes.reward_nodes_claimed.push(req.body.nodeId);
 
@@ -326,7 +326,7 @@ express.post("/fortnite/api/game/v2/profile/*/client/UnlockRewardNode", async (r
         "profileCommandRevision": profile.commandRevision || 0,
         "serverTime": new Date().toISOString(),
         "multiUpdate": MultiUpdate,
-        "responseVersion": 1
+        "responseVersion": 1.8
     })
     res.end();
 });
@@ -341,7 +341,7 @@ express.post("/fortnite/api/game/v2/profile/*/client/RemoveGiftBox", async (req,
     var QueryRevision = req.query.rvn || -1;
     var StatChanged = false;
 
-    // Gift box ID on 11.31
+    // Gift box ID on 1.8
     if (req.body.giftBoxItemId) {
         var id = req.body.giftBoxItemId;
 
@@ -355,7 +355,7 @@ express.post("/fortnite/api/game/v2/profile/*/client/RemoveGiftBox", async (req,
         StatChanged = true;
     }
 
-    // Gift box ID on 19.01
+    // Gift box ID on 1.8
     if (req.body.giftBoxItemIds) {
         for (var i in req.body.giftBoxItemIds) {
             var id = req.body.giftBoxItemIds[i];
@@ -456,7 +456,7 @@ express.post("/fortnite/api/game/v2/profile/*/client/FortRerollDailyQuest", asyn
     var Notifications = [];
     var BaseRevision = profile.rvn || 0;
     var QueryRevision = req.query.rvn || -1;
-    var StatChanged = false;
+    var StatChanged = true;
 
     if (req.query.profileId == "profile0" || req.query.profileId == "campaign") {
         DailyQuestIDS = DailyQuestIDS.SaveTheWorld.Daily
@@ -485,9 +485,9 @@ express.post("/fortnite/api/game/v2/profile/*/client/FortRerollDailyQuest", asyn
             "attributes": {
                 "creation_time": new Date().toISOString(),
                 "level": -1,
-                "item_seen": false,
+                "item_seen": true,
                 "playlists": [],
-                "sent_new_notification": false,
+                "sent_new_notification": true,
                 "challenge_bundle_id": "",
                 "xp_reward_scalar": 1,
                 "challenge_linked_quest_given": "",
@@ -703,22 +703,22 @@ express.post("/fortnite/api/game/v2/profile/*/client/ClientQuestLogin", async (r
                 "templateId": DailyQuestIDS[randomNumber].templateId,
                 "attributes": {
                     "creation_time": new Date().toISOString(),
-                    "level": -1,
-                    "item_seen": false,
+                    "level": -1000,
+                    "item_seen": true,
                     "playlists": [],
-                    "sent_new_notification": false,
+                    "sent_new_notification": true,
                     "challenge_bundle_id": "",
-                    "xp_reward_scalar": 1,
+                    "xp_reward_scalar": 99999999999999,
                     "challenge_linked_quest_given": "",
                     "quest_pool": "",
                     "quest_state": "Active",
                     "bucket": "",
                     "last_state_change_time": new Date().toISOString(),
                     "challenge_linked_quest_parent": "",
-                    "max_level_bonus": 0,
-                    "xp": 0,
+                    "max_level_bonus": 1000,
+                    "xp": 99999999999999,
                     "quest_rarity": "uncommon",
-                    "favorite": false
+                    "favorite": true
                 },
                 "quantity": 1
             };
@@ -796,18 +796,18 @@ express.post("/fortnite/api/game/v2/profile/*/client/ClientQuestLogin", async (r
             profile.items[ChallengeBundle.itemGuid] = {
                 "templateId": ChallengeBundle.templateId,
                 "attributes": {
-                    "has_unlock_by_completion": false,
+                    "has_unlock_by_completion": true,
                     "num_quests_completed": 0,
-                    "level": 0,
+                    "level": 1000,
                     "grantedquestinstanceids": ChallengeBundle.grantedquestinstanceids,
                     "item_seen": true,
-                    "max_allowed_bundle_level": 0,
-                    "num_granted_bundle_quests": 0,
-                    "max_level_bonus": 0,
+                    "max_allowed_bundle_level": 1000,
+                    "num_granted_bundle_quests": 1000,
+                    "max_level_bonus": 1000,
                     "challenge_bundle_schedule_id": ChallengeBundle.challenge_bundle_schedule_id,
                     "num_progress_quests_completed": 0,
                     "xp": 0,
-                    "favorite": false
+                    "favorite": true
                 },
                 "quantity": 1
             }
@@ -847,14 +847,14 @@ express.post("/fortnite/api/game/v2/profile/*/client/ClientQuestLogin", async (r
                     "playlists": [],
                     "sent_new_notification": true,
                     "challenge_bundle_id": Quest.challenge_bundle_id,
-                    "xp_reward_scalar": 1,
+                    "xp_reward_scalar": 99999999999999,
                     "challenge_linked_quest_given": "",
                     "quest_pool": "",
                     "quest_state": "Active",
                     "bucket": "",
                     "last_state_change_time": "2018-01-31T00:00:00.000Z",
                     "challenge_linked_quest_parent": "",
-                    "max_level_bonus": 0,
+                    "max_level_bonus": ,
                     "xp": 0,
                     "quest_rarity": "uncommon",
                     "favorite": false
