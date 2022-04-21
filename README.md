@@ -8,7 +8,7 @@ Then Download Any Fortnite Build With EasyInstaller
 You Can Download EasyInstaller Here: https://github.com/Kyiro/Fortnite-ManifestsArchive/releases/tag/1.2
 Then Create A Text Document On whichever location you want
 Then Open The Document
-Then Add FortniteClient-Win64-Shipping.exe and this argument: -skippathcheck
+Then Paste FortniteClient-Win64-Shipping.exe and this argument: -skippathcheck
 Then Click File Then Click Save As And Name It Launcher.bat (if another launcher.bat exists you need to replace it)
 Then Make Sure To Save It In The Win64 Path
 Then Run It
