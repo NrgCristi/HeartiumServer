@@ -1,6 +1,6 @@
 Download Any Old Fortnite Build
 Use Something To Decompile The Apk File
-Then Open UE4CommandLine.txt
+Then Go To assets and open UE4CommandLine.txt
 Then Make A New Line In The Document
 Then Paste This Argument: -skippathcheck
 Then Save The Modifications
