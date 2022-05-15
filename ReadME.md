@@ -16,3 +16,4 @@ Then Make Sure To extract it in the Win64 Folder (If another launcher exists you
 Then Run Launcher.bat
 Then Put Any Username And Password
 And Finish!
+If You Have Problems Contact Me On Discord at NRG Cristi#9364
