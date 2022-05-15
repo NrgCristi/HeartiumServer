@@ -4,13 +4,15 @@ Extract The Archive To Any Location You Want
 Run install_packages.bat (Make Sure To Run This Every Time You Use This Private Server)
 Then Run start.bat (Make Sure To Keep It Opened)
 Then Go To https://localhost:3551 (Make Sure To Keep The Browser Opened)
-Then Download Any Fortnite Build With EasyInstaller
-You Can Download EasyInstaller Here: https://github.com/Kyiro/Fortnite-ManifestsArchive/releases/tag/1.2
-Then Create A Text Document On whichever location you want
-Then Open The Document
-Then Paste FortniteClient-Win64-Shipping.exe and this argument: -skippathcheck
-Then Click File Then Click Save As And Name It Launcher.bat (if another launcher.bat exists you need to replace it)
-Then Make Sure To Save It In The Win64 Path
-Then Run It
+Then Go To The Releases Tab Of This Project And Go To The Launcher Release And Then Download LawinServer.exe (Note: This Is Modified Lawin Server)
+Then Run It (If Your Internet Stops Working Go To Proxy Settings And Turn Off The Use a proxy server option)
+Then Choose Any Launcher From The Releases Tab And Download It
+Then Go To https://github.com/Kyiro/Fortnite-ManifestsArchive/releases and download easy installer
+Then Open It
+Then Download The Version You Want
+Then Go To The Releases Tab
+Then Download The Launcher Of The Version That You Downloaded)
+Then Make Sure To extract it in the Win64 Folder (If another launcher exists you need to replace it)
+Then Run Launcher.bat
 Then Put Any Username And Password
 And Finish!
